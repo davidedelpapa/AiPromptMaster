@@ -6,15 +6,20 @@ This document provides guidelines and best practices to help you contribute effe
 
 ## Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
-- [How to Contribute](#how-to-contribute)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Suggesting Enhancements](#suggesting-enhancements)
-  - [Submitting Pull Requests](#submitting-pull-requests)
-- [Style Guidelines](#style-guidelines)
-  - [Code Formatting](#code-formatting)
-  - [Pre-Commit Hooks](#pre-commit-hooks)
+- [Contributing to ProjectName](#contributing-to-projectname)
+  - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [Getting Started](#getting-started)
+  - [How to Contribute](#how-to-contribute)
+    - [Reporting Bugs](#reporting-bugs)
+    - [Suggesting Enhancements](#suggesting-enhancements)
+    - [Submitting Pull Requests](#submitting-pull-requests)
+  - [Style Guidelines](#style-guidelines)
+    - [Pre-Commit Hooks](#pre-commit-hooks)
+    - [Code Formatting](#code-formatting)
+    - [Code Suggestions](#code-suggestions)
+    - [Other Tools](#other-tools)
+  - [Conclusion](#conclusion)
 
 ## Code of Conduct
 
@@ -62,9 +67,35 @@ When submitting a pull request, please ensure that your changes meet the followi
 
 ## Style Guidelines
 
+### Pre-Commit Hooks
+
+We use pre-commit hooks to ensure that code formatting and other checks are performed automatically before each commit. To set up pre-commit hooks for this project, follow these steps:
+
+Install the pre-commit package using pip:
+
+```bash
+pip install pre-commit
+```
+
+Run the following command in the project's root directory to install the pre-commit hooks:
+
+```bash
+pre-commit install
+```
+
+Optionally, to update, or if there were errors while installing, you can run:
+
+```bash
+pre-commit autoupdate
+```
+
+Now, the pre-commit hooks will run automatically before each commit, checking your code formatting and other requirements.
+
 ### Code Formatting
 
-We use the `black` code formatter to maintain a consistent coding style across the project. Please ensure that your code is formatted using `black` before submitting a pull request. You can install `black` using `pip`:
+We use the `black` code formatter to maintain a consistent coding style across the project. Please ensure that your code is formatted using `black` before submitting a pull request.
+
+It is automatically installed with `pre-commit`, however you can install `black` using `pip`:
 
 ```bash
 pip install black
@@ -75,20 +106,20 @@ To format your code, run the following command in the project's root directory:
 ```bash
 black .
 ```
-### Pre-Commit Hooks
-We use pre-commit hooks to ensure that code formatting and other checks are performed automatically before each commit. To set up pre-commit hooks for this project, follow these steps:
 
-Install the pre-commit package using pip:
-```bash
-pip install pre-commit
-```
+### Code Suggestions
 
-Run the following command in the project's root directory to install the pre-commit hooks:
-```bash
-pre-commit install
-```
+We use `Sourcery` for code suggestions.
 
-Now, the pre-commit hooks will run automatically before each commit, checking your code formatting and other requirements.
+It is automatically installed with `pre-commit`.
+
+### Other Tools
+
+We use `isort` and `Flake8` to better the quality of the source code.
+
+All these tools are automatically installed with `pre-commit`.
+
+## Conclusion
 
 If you encounter any issues or have questions, feel free to reach out to the maintainers or open a new issue on GitHub. We're here to help and appreciate your efforts to contribute to the project.
 
@@ -96,4 +127,4 @@ Happy coding, and once again, thank you for your contributions!
 
 Maintainers will look at PR that have no merge conflicts when deciding what to add to the project. Make sure your PR shows up here:
 
-https://github.com/Torantulino/Auto-GPT/pulls?q=is%3Apr+is%3Aopen+-is%3Aconflict+
+<https://github.com/davidedelpapa/AiPromptMaster/pulls?q=is%3Apr+is%3Aopen+-is%3Aconflict+>
