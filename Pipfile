@@ -4,8 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+python-dotenv = "*"
 
 [dev-packages]
+flake8 = "*"
+pre-commit = "*"
+black = "*"
+sourcery = "*"
+isort = "*"
 
 [requires]
 python_version = "3.9"
